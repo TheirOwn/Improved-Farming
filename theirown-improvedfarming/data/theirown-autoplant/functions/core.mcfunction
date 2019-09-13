@@ -31,5 +31,6 @@ execute as @e[name=ComposterCloud] at @s unless block ~ ~ ~ minecraft:composter 
 execute as @a[scores={tap-trigger=1}] run function theirown-autoplant:config/mainconfig
 execute as @a[scores={tap-trigger=2}] run function theirown-autoplant:config/compostconfig
 execute as @a[scores={tap-trigger=3}] run function theirown-autoplant:config/plantconfig
-execute as @a[scores={tap-trigger=4..}] run function theirown-autoplant:config/configchanger
+execute as @a[scores={tap-trigger=4}] run function theirown-autoplant:config/bonemealconfig
+execute as @a[scores={tap-trigger=5..}] run function theirown-autoplant:config/configchanger
 scoreboard players enable @a tap-trigger

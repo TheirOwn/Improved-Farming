@@ -26,12 +26,16 @@ scoreboard objectives add CompostTime dummy
 scoreboard players set compostmode tap-config 1 
 scoreboard players set composttime CompostTime 120 
 
+#0 = 4, 1=9,2=16
+scoreboard players set bonemeal tap-config 1
+
 #FOR CONFIG
 scoreboard objectives add tap-trigger trigger "tap-trigger"
 scoreboard players enable @a tap-trigger
 
 #not working right now?
 gamerule sendCommandFeedback false
+execute as @s run function theirown-autoplant:config/clearchat
 tellraw @a ["",{"text":"Thanks for using TheirOwn's Improved Farming!","color":"gold"}]
 tellraw @a ["",{"text":"Click here to change config settings","clickEvent":{"action":"run_command","value":"/trigger tap-trigger set 1"},"color":"green"}]
 

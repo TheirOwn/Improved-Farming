@@ -1,7 +1,8 @@
 scoreboard players set @s Composter 4
 
-execute unless entity @e[distance=..1.5,type=item,nbt={Item:{id:"minecraft:bone_meal",Count:1b}},limit=1] run data modify block ~ ~-1 ~ Items append value {Slot:4b,id:"minecraft:bone_meal",Count: 10b}
-execute at @s run data modify entity @e[distance=..1.5,type=item,nbt={Item:{id:"minecraft:bone_meal",Count:1b}},limit=1] Item merge value {id:"minecraft:bone_meal",Count:10b}
+execute as @s at @s if score bonemeal tap-config matches 0 run function theirown-autoplant:required/composter/bonemeal0
+execute as @s at @s if score bonemeal tap-config matches 1 run function theirown-autoplant:required/composter/bonemeal1
+execute as @s at @s if score bonemeal tap-config matches 2 run function theirown-autoplant:required/composter/bonemeal2
 
 #restore hopper functionality
 data merge block ~ ~-1 ~ {TransferCooldown:0}

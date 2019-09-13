@@ -9,7 +9,7 @@ scoreboard objectives add itemcount dummy
 scoreboard objectives add itemage dummy
 scoreboard objectives add seedtick dummy
 
-scoreboard players set seeddelay seedtick 20
+scoreboard players set seeddelay seedtick 1
 scoreboard players set seedcounter seedtick 0
 scoreboard players set agezero itemage 0
 scoreboard players set planttime itemage 120 
@@ -24,7 +24,7 @@ scoreboard objectives add Composter dummy "Composter"
 scoreboard objectives add CompostTime dummy
 
 scoreboard players set compostmode tap-config 1 
-scoreboard players set composttime CompostTime 120 
+scoreboard players set composttime CompostTime 360 
 
 #0 = 4, 1=9,2=16
 scoreboard players set bonemeal tap-config 1
